@@ -1,7 +1,7 @@
-package org.example;
+package codewars;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        //Here you can check my solutions for Kata
     }
 }
