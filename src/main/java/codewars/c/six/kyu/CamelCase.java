@@ -1,35 +1,26 @@
 package codewars.c.six.kyu;
 
 /**
- * Convert string to camel case (6kyu)
- *
- * Complete the method so that it converts dash/underscore delimited words into camel casing.
- * The first word within the output should be capitalized only if the original word was capitalized
- * (known as Upper Camel Case, also often referred to as Pascal case).
- * The next words should be always capitalized.
- *
- * Examples
- * "the-stealth-warrior" gets converted to "theStealthWarrior"
- *
- * "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
- *
- * "The_Stealth-Warrior" gets converted to "TheStealthWarrior"
+ * <a href="https://www.codewars.com/kata/5208f99aee097e6552000148">Break camelCase (6kyu)</a>
+ * <p>
+ * Complete the solution so that the function will break up camel casing,
+ * using a space between words.
+ * <p>
+ * Example<p>
+ * "camelCasing"  =>  "camel Casing"<p>
+ * "identifier"   =>  "identifier"<p>
+ * ""             =>  ""
  */
 
 public class CamelCase {
-    public String convertToCamelCase(String string) {
-        String[] words = string.split("[-_]");
+    public String breakCamelCase(String input) {
+        char[] chars = input.toCharArray();
         StringBuilder builder = new StringBuilder();
-        builder.append(words[0]);
-        for (int i = 1; i < words.length; i++) {
-            char[] chars = words[i].toCharArray();
-            for (int j = 0; j < chars.length; j++) {
-                if (j == 0) {
-                    builder.append(Character.toUpperCase(chars[j]));
-                    continue;
-                }
-                builder.append(chars[j]);
+        for (char letter : chars) {
+            if (Character.isUpperCase(letter)) {
+                builder.append(" ");
             }
+            builder.append(letter);
         }
         return builder.toString();
     }
