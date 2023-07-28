@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <a href="https://www.codewars.com/kata/56efc695740d30f963000557">altERnaTIng cAsE <=> ALTerNAtiNG CaSe (8kyu)</a>
+ * <a href="https://www.codewars.com/kata/56efc695740d30f963000557">
+ *     altERnaTIng cAsE <=> ALTerNAtiNG CaSe (8kyu)</a>
  * <p>
  * Define String.prototype.toAlternatingCase
  * (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase
